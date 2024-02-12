@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary */
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  /* Neutral */
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--dark-cyan);
+  background-image: url("images/bg-pattern-top.svg"),
+    url("images/bg-pattern-bottom.svg");
+  background-position: left -100vh top -80vh, right -100vh bottom -80vh;
+  background-repeat: no-repeat, no-repeat;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  color: var(--dark-gray);
+  padding: 2rem;
+  transition: all.3s ease-in;
+}
+@media screen and (min-width: 640px) {
+  body {
+    background-position: left -50vh top -90vh, right -50vh bottom -100vh;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-position: left -30vh top -60vh, right -30vh bottom -70vh;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+.bold {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.card {
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+.card__header img {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card__body {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.card__body .card__avatar {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  background-color: #fff;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+.card__body .card__avatar img {
+  border-radius: 50%;
+}
+
+.card__body h1 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card__body h1 span {
+  color: var(--dark-gray);
+  font-weight: 400;
+}
+
+.card__footer {
+  padding: 1.5rem;
+  border-top: 1px solid hsla(0, 0%, 59%, 0.2);
+  display: flex;
+  justify-content: space-around;
+}
+
+.card__footer p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.card__footer .light {
+  letter-spacing: 0.125rem;
+  font-size: 0.75rem;
+}
